@@ -1,6 +1,22 @@
+
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+}
+aside {
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
 *,*::after,*::before{
     box-sizing: border-box;
 }
+
 
 a{
     color: #f7f7f7;
@@ -22,7 +38,7 @@ ul,li {
 }
 
 .menu li a:hover {
-	background-color:#000066; 	/*リンクにマウスが乗ったら背景色を変更する*/
+    background-color:#000066;   /*リンクにマウスが乗ったら背景色を変更する*/
     
 }
 
@@ -47,6 +63,21 @@ ul,li {
      
   }
 
+  aside {
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.company-logo{
+    margin-top: auto;
+}
+
+  img{
+      height: 7em;
+  }
+  
 
 .left-navi {
     position: fixed;
@@ -75,7 +106,7 @@ h1{
 }
 
 .right-content {
-    margin-left: 10%;
+    
 }
 
 
@@ -89,6 +120,6 @@ video{
     object-fit: contain;
 }
 
-.video-blok{
-    
-}
+
+
+
