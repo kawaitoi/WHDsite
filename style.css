@@ -105,8 +105,16 @@ h1{
     margin-bottom: 1em;
 }
 
-.right-content {
-    
+
+
+.video-block,.video-blok2,.video-blok3,.video-blok4,.video-blok5{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 
@@ -120,6 +128,42 @@ video{
     object-fit: contain;
 }
 
+.video-block2{
+    position: relative;
+}
 
+.block-text,.block-text2,.block-text3,.block-text4,.block-text5{
+    position: absolute;
+    z-index: 100;
+    top: 200px;
+    }
 
+.text-title,.text-title2,.text-title3,.text-title4,.text-title5{
+   font-size: 50px;
+    color: #fff;
+    margin-left: 30px;
+}
 
+.text,.text2,.text3,.text4,.text5{
+    color: #fafafa;
+    margin-left: 30px;
+}
+
+.btn-flat-border {
+    display: inline-block;
+    padding: 10px;   
+    text-decoration: none;
+    color: #fff;
+    border: solid 2px #67c5ff;
+    transition: .4s;
+    margin-top: 3rem;
+    margin-left: 30px;
+    border: 1px solid #fff;
+  }
+  
+  .btn-flat-border:hover {
+    background: #fafafa;
+    color: #003391;
+  }
+
+  
