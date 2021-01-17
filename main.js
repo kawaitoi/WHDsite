@@ -6,5 +6,3 @@ for(let i = 0; i < parentMenu.length; i++){
 
     })
 }
-
-ScrollReveal().reveal('.text');
