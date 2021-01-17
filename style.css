@@ -5,6 +5,7 @@ body {
     display: flex;
     min-height: 100vh;
     display: flex;
+    background-color: #000066;
 }
 aside {
     width: 25%;
@@ -118,6 +119,7 @@ h1{
 }
 
 
+
 video{
     pointer-events: none;
     height: 100%;
@@ -126,17 +128,29 @@ video{
     transition-delay: .5s;
     text-align: center;
     object-fit: contain;
+    overflow: visible;
 }
 
-.video-block2{
-    position: relative;
-}
+
+
+
 
 .block-text,.block-text2,.block-text3,.block-text4,.block-text5{
     position: absolute;
     z-index: 100;
     top: 200px;
+    animation-name: my-fade-in;
+  animation-duration: 3s ;
     }
+
+    @keyframes my-fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
 
 .text-title,.text-title2,.text-title3,.text-title4,.text-title5{
    font-size: 50px;
@@ -144,9 +158,21 @@ video{
     margin-left: 30px;
 }
 
-.text,.text2,.text3,.text4,.text5{
+.text{
     color: #fafafa;
     margin-left: 30px;
+    animation: SlideIn 4s ;
+}
+
+@keyframes SlideIn {
+    0% {
+      opacity: 0;/*初期状態では透明に*/
+      transform: translateX(84px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
 }
 
 .btn-flat-border {
@@ -159,6 +185,8 @@ video{
     margin-top: 3rem;
     margin-left: 30px;
     border: 1px solid #fff;
+    animation-duration: 3s;
+    animation-name: my-fade-in;
   }
   
   .btn-flat-border:hover {
@@ -166,4 +194,97 @@ video{
     color: #003391;
   }
 
-  
+ 
+    
+@media screen and (max-width: 959px) { 
+        
+
+        aside{
+            display: none;
+        }
+    
+        main {
+            width: 100%;
+            height: 100%;
+            padding-top: 50px;
+            margin-top: auto;
+        }
+    
+        video{
+            position: relative;
+        }
+    
+        .block-text,.block-text2,.block-text3,.block-text4,.block-text5{
+           
+           position: absolute;
+           top: 10%;
+           display: inline;
+        }
+    
+        .text-title,.text-title2,.text-title3,.text-title4,.text-title5{
+            font-size: 40px;
+        }
+    
+        .text{
+            font-size: 20px;
+            margin-top: 10%;
+    
+        }
+    
+        .btn-flat-border{
+            margin-left: 60%;
+            position: relative;
+            margin-top: 10%;
+            background-color:  #000066;
+            
+        }
+    
+    }
+    
+    @media screen and (max-width: 480px) {
+        body{
+            background-color: #000066;
+        }
+        
+        
+            aside{
+                display: none;
+            }
+        
+            main {
+                width: 100%;
+                height: 100%;
+                padding-top: 50px;
+                margin-top: auto;
+            }
+        
+            video{
+                position: relative;
+            }
+        
+            .block-text,.block-text2,.block-text3,.block-text4,.block-text5{
+               
+               position: absolute;
+               top: 10%;
+               display: inline;
+            }
+        
+            .text-title,.text-title2,.text-title3,.text-title4,.text-title5{
+                font-size: 20px;
+                margin-top: 10px;
+            }
+        
+            .text{
+        font-size: 10px;
+        margin-bottom: auto;
+            }
+        
+            .btn-flat-border{
+                opacity: 0.4;
+                margin-left: 60%;
+                position: relative;
+                margin-top: 10%; 
+                background-color: #000066;
+            }
+        
+          }
